@@ -1,9 +1,10 @@
 import time
 
 
-def print_pause(string: str, seconds: int):
+def print_pause(string: str, delay=2):
     """Print a passed in string after a
-    delay of passed in seconds.
+    delay of passed in seconds. Default
+    delay is of 2 seconds.
     """
-    time.sleep(seconds)
+    time.sleep(delay)
     print(string)
