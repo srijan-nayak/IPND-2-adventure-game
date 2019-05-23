@@ -1,3 +1,4 @@
+import random
 import time
 
 
@@ -8,3 +9,6 @@ def print_pause(string: str, delay=2):
     """
     time.sleep(delay)
     print(string)
+
+enemies = ["Red Dragon", "Armoured Ogre", "Ferocious Minotaur"]
+enemy = random.choice(enemies)
