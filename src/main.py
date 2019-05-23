@@ -10,6 +10,7 @@ def print_pause(string: str, delay=2)->None:
     time.sleep(delay)
     print(string)
 
+
 enemies = ["Red Dragon", "Armoured Ogre", "Ferocious Minotaur"]
 enemy = random.choice(enemies)
 
@@ -30,6 +31,23 @@ while True:
             exit()
         elif choice == "2":
             break
+        else:
+            print_pause("Invalid input! Enter again.")
+    print_pause("You spot three doors in the corridor.")
+    while True:
+        print_pause("Where would you like to go?")
+        print_pause("1. Go to the room with the green room on the left", 1)
+        print_pause("2. Go to the room with the blue door on the right", 1)
+        print_pause("3. Go to the room with the black door at the end "
+                    "of the corridor")
+        print_pause("Enter one of the option numbers.")
+        choice = input()
+        if choice == "1":
+            pass
+        elif choice == "2":
+            pass
+        elif choice == "3":
+            pass
         else:
             print_pause("Invalid input! Enter again.")
     print_pause("Would you like to try again?")
