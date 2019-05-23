@@ -28,7 +28,7 @@ while True:
             print_pause("You exit the dungeon and go back home.")
             print_pause("GAME OVER!")
             exit()
-        elif choice == 2:
+        elif choice == "2":
             break
         else:
             print_pause("Invalid input! Enter again.")
