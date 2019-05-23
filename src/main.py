@@ -13,6 +13,8 @@ def print_pause(string: str, delay=2)->None:
 
 enemies = ["Red Dragon", "Armoured Ogre", "Ferocious Minotaur"]
 enemy = random.choice(enemies)
+choice = ""
+items = []
 
 while True:
     print_pause("You are in an empty corridor deep in a dungeon.")
