@@ -7,8 +7,8 @@ def print_pause(string: str, delay=2)->None:
     delay of passed in seconds. Default
     delay is of 2 seconds.
     """
-    time.sleep(delay)
     print(string)
+    time.sleep(delay)
 
 
 enemies = ["Red Dragon", "Armoured Ogre", "Ferocious Minotaur"]
