@@ -13,6 +13,8 @@ def print_pause(string: str, delay=2)->None:
 
 enemies = ["Red Dragon", "Armoured Ogre", "Ferocious Minotaur"]
 enemy = random.choice(enemies)
+writing_utensils = ["pen", "pencil", "marker"]
+writing_utensil = random.choice(writing_utensils)
 choice = ""
 items = []
 
@@ -60,7 +62,15 @@ while True:
                 print_pause("There's nothing here.")
             print_pause("You leave the room.")
         elif choice == "2":
-            pass
+            print_pause("You enter the room with the blue door.")
+            if writing_utensil not in items:
+                print_pause(f"You find a {writing_utensil} lying on "
+                            "the ground.")
+                items.append(writing_utensil)
+                print_pause(f"You take the {writing_utensil}.")
+            else:
+                print_pause("There is nothing here.")
+            print_pause("You leave the room.")
         elif choice == "3":
             pass
         else:
