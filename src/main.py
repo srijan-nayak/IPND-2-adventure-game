@@ -45,7 +45,20 @@ while True:
         print_pause("Enter one of the option numbers.")
         choice = input()
         if choice == "1":
-            pass
+            print_pause("You enter the room with the green door.")
+            if "deathnote" not in items:
+                print_pause("You find a black notebook lying on the ground.")
+                print_pause("The notebook has DEATHNOTE written on it.")
+                print_pause("It has some instructions written in it.")
+                print_pause("Looks like if you write someone's name, whose\n"
+                            "face you have seen, in the DEATHNOTE, that\n"
+                            "person will die in 10 seconds due to a heart\n"
+                            "attack.")
+                items.append("deathnote")
+                print_pause("You take the DEATHNOTE.")
+            else:
+                print_pause("There's nothing here.")
+            print_pause("You leave the room.")
         elif choice == "2":
             pass
         elif choice == "3":
