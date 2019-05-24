@@ -52,10 +52,10 @@ while True:
                 print_pause("You find a black notebook lying on the ground.")
                 print_pause("The notebook has DEATHNOTE written on it.")
                 print_pause("It has some instructions written in it.")
-                print_pause("Looks like if you write someone's name, whose\n"
-                            "face you have seen, in the DEATHNOTE, that\n"
-                            "person will die in 10 seconds due to a heart\n"
-                            "attack.")
+                print_pause("Looks like if you write someone's name, whose")
+                print_pause("face you have seen, in the DEATHNOTE, that")
+                print_pause("person will die in 10 seconds due to a heart")
+                print_pause("attack.")
                 items.append("deathnote")
                 print_pause("You take the DEATHNOTE.")
             else:
