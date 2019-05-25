@@ -72,7 +72,13 @@ while True:
                 print_pause("There is nothing here.")
             print_pause("You leave the room.")
         elif choice == "3":
-            pass
+            print_pause("You take a deep breath before you open the "
+                        "black door.")
+            print_pause("Somehow you know what's beyond this door.")
+            print_pause("You open the door.")
+            print_pause(f"You find the {enemy} in the room.")
+            while True:
+                print_pause("What do you do?")
         else:
             print_pause("Invalid input! Enter again.")
     print_pause("Would you like to try again?")
