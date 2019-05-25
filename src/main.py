@@ -79,6 +79,15 @@ while True:
             print_pause(f"You find the {enemy} in the room.")
             while True:
                 print_pause("What do you do?")
+                option_count = 0
+                if writing_utensil in items:
+                    option_count += 1
+                    print_pause(f"{option_count}. Fight him with your pen")
+                if "deathnote" in items:
+                    option_count += 1
+                    print_pause(f"{option_count}. Ask for his autograph")
+                option_count += 1
+                print_pause(f"{option_count}. Run back to the corridor.")
         else:
             print_pause("Invalid input! Enter again.")
     print_pause("Would you like to try again?")
