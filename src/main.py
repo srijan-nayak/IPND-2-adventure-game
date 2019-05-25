@@ -82,12 +82,12 @@ while True:
                 option_count = 0
                 if writing_utensil in items:
                     option_count += 1
-                    print_pause(f"{option_count}. Fight him with your pen")
+                    print_pause(f"{option_count}. Fight him with your pen", 1)
                 if "deathnote" in items:
                     option_count += 1
-                    print_pause(f"{option_count}. Ask for his autograph")
+                    print_pause(f"{option_count}. Ask for his autograph", 1)
                 option_count += 1
-                print_pause(f"{option_count}. Run back to the corridor.")
+                print_pause(f"{option_count}. Run back to the corridor.", 1)
         else:
             print_pause("Invalid input! Enter again.")
     print_pause("Would you like to try again?")
