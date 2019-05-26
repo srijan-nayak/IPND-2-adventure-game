@@ -34,7 +34,8 @@ while True:
         else:
             print_pause("Invalid input! Enter again.")
     print_pause("You spot three doors in the corridor.")
-    while True:
+    repeatCorridorChoice = True
+    while repeatCorridorChoice:
         print_pause("Where would you like to go?")
         print_pause("1. Go to the room with the green room on the left", 1)
         print_pause("2. Go to the room with the blue door on the right", 1)
