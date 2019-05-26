@@ -38,7 +38,8 @@ while True:
         else:
             print_pause("Invalid input! Enter again.")
     print_pause("You spot three doors in the corridor.")
-    while True:
+    repeatCorridorChoice = True
+    while repeatCorridorChoice:
         print_pause("Where would you like to go?")
         print_pause("1. Go to the room with the green room on the left", 1)
         print_pause("2. Go to the room with the blue door on the right", 1)
@@ -52,10 +53,10 @@ while True:
                 print_pause("You find a black notebook lying on the ground.")
                 print_pause("The notebook has DEATHNOTE written on it.")
                 print_pause("It has some instructions written in it.")
-                print_pause("Looks like if you write someone's name, whose\n"
-                            "face you have seen, in the DEATHNOTE, that\n"
-                            "person will die in 10 seconds due to a heart\n"
-                            "attack.")
+                print_pause("Looks like if you write someone's name, whose")
+                print_pause("face you have seen, in the DEATHNOTE, that")
+                print_pause("person will die in 10 seconds due to a heart")
+                print_pause("attack.")
                 items.append("deathnote")
                 print_pause("You take the DEATHNOTE.")
             else:
