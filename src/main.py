@@ -73,7 +73,46 @@ while True:
                 print_pause("There is nothing here.")
             print_pause("You leave the room.")
         elif choice == "3":
-            pass
+            print_pause("You take a deep breath before you open the "
+                        "black door.")
+            print_pause("Somehow you know what's beyond this door.")
+            print_pause("You open the door.")
+            print_pause(f"You find the {enemy} in the room.")
+            while True:
+                print_pause("What do you do?")
+                option_count = 0
+                if writing_utensil in items:
+                    option_count += 1
+                    print_pause(f"{option_count}. Fight him with your pen", 1)
+                if "deathnote" in items:
+                    option_count += 1
+                    print_pause(f"{option_count}. Ask for his autograph", 1)
+                option_count += 1
+                print_pause(f"{option_count}. Run back to the corridor.", 1)
+                print_pause("Enter one of the option numbers.", 0)
+                choice = input()
+                if option_count == 3:
+                    if choice == "1":
+                        print_pause("You uncap your pen that you just found.")
+                        print_pause(f"You rush towards the {enemy} swinging "
+                                    "your pen.")
+                        print_pause("But you never stood a chance with your "
+                                    "pen.")
+                        print_pause(f"The {enemy} renders you unfit for "
+                                    "battle with a single attack.")
+                        repeatCorridorChoice = False
+                        break
+                elif option_count == 2 and writing_utensil in items:
+                    if choice == "1":
+                        print_pause("You uncap your pen that you just found.")
+                        print_pause(f"You rush towards the {enemy} swinging "
+                                    "your pen.")
+                        print_pause("But you never stood a chance with your "
+                                    "pen.")
+                        print_pause(f"The {enemy} renders you unfit for "
+                                    "battle with a single attack.")
+                        repeatCorridorChoice = False
+                        break
         else:
             print_pause("Invalid input! Enter again.")
     print_pause("Would you like to try again?")
