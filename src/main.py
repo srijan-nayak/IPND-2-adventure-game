@@ -89,6 +89,30 @@ while True:
                     print_pause(f"{option_count}. Ask for his autograph", 1)
                 option_count += 1
                 print_pause(f"{option_count}. Run back to the corridor.", 1)
+                print_pause("Enter one of the option numbers.", 0)
+                choice = input()
+                if option_count == 3:
+                    if choice == "1":
+                        print_pause("You uncap your pen that you just found.")
+                        print_pause(f"You rush towards the {enemy} swinging "
+                                    "your pen.")
+                        print_pause("But you never stood a chance with your "
+                                    "pen.")
+                        print_pause(f"The {enemy} renders you unfit for "
+                                    "battle with a single attack.")
+                        repeatCorridorChoice = False
+                        break
+                elif option_count == 2 and writing_utensil in items:
+                    if choice == "1":
+                        print_pause("You uncap your pen that you just found.")
+                        print_pause(f"You rush towards the {enemy} swinging "
+                                    "your pen.")
+                        print_pause("But you never stood a chance with your "
+                                    "pen.")
+                        print_pause(f"The {enemy} renders you unfit for "
+                                    "battle with a single attack.")
+                        repeatCorridorChoice = False
+                        break
         else:
             print_pause("Invalid input! Enter again.")
     print_pause("Would you like to try again?")
