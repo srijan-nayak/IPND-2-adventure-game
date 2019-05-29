@@ -41,7 +41,7 @@ while True:
         print_pause("2. Go to the room with the blue door on the right", 1)
         print_pause("3. Go to the room with the black door at the end\n"
                     "of the corridor")
-        print_pause("Enter one of the option numbers.")
+        print_pause("Enter one of the option numbers.", 0)
         choice = input()
         if choice == "1":
             pass
