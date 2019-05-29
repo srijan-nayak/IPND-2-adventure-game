@@ -27,7 +27,7 @@ while True:
         print_pause("What do you do?")
         print_pause("1. Give up and go back home", 1)
         print_pause("2. Continue this hopeless quest", 1)
-        print_pause("Enter one of the option numbers.")
+        print_pause("Enter one of the option numbers.", 0)
         choice = input()
         if choice == "1":
             print_pause("You exit the dungeon and go back home.")
