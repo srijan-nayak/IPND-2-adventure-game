@@ -29,6 +29,8 @@ while True:
             print_pause("GAME OVER!")
             exit()
         elif choice == "2":
+            print_pause("You continue on this seemingly hopeless "
+                        "quest.")
             break
         else:
             print_pause("Invalid input! Enter again.")
