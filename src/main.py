@@ -102,13 +102,40 @@ while True:
                                     "battle with a single attack.")
                         repeatCorridorChoice = False
                         break
-                elif option_count == 2 and writing_utensil in items:
-                    if choice == "1":
+                    elif choice == "2":
+                        print_pause("You gather all your courage and ask "
+                                    f"the {enemy} for his autograph.")
+                        print_pause(f"Agreeing to your request, the {enemy} "
+                                    "takes your DEATHNOTE and "
+                                    f"your {writing_utensil} for signing.")
+                        print_pause("While blushing. A lot.")
+                        print_pause("He signs his name in the DEATHNOTE.")
+                        print_pause("You take back the DEATHNOTE and the pen.")
+                        print_pause(f"The {enemy} suddenly has a heart attack "
+                                    "10 seconds after signing his name.")
+                        print_pause(f"The {enemy} is dead!")
+                        print_pause("Looks like the DEATHNOTE worked.")
+                        print_pause("Congrats!")
+                        print_pause(f"You have killed the {enemy}!")
+                        print_pause("You won!")
+                        repeatCorridorChoice = False
+                        break
+                elif option_count == 2:
+                    if choice == "1" and writing_utensil in items:
                         print_pause("You uncap your pen that you just found.")
                         print_pause(f"You rush towards the {enemy} swinging "
                                     "your pen.")
                         print_pause("But you never stood a chance with your "
                                     "pen.")
+                        print_pause(f"The {enemy} renders you unfit for "
+                                    "battle with a single attack.")
+                        repeatCorridorChoice = False
+                        break
+                    if choice == "1" and "deathnote" in items:
+                        print_pause("You gather all your courage and ask "
+                                    f"the {enemy} for his autograph.")
+                        print_pause(f"But the {enemy} is annoyed that you "
+                                    "don't have a writing utensil!")
                         print_pause(f"The {enemy} renders you unfit for "
                                     "battle with a single attack.")
                         repeatCorridorChoice = False
