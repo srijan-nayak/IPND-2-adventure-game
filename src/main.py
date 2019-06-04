@@ -77,7 +77,7 @@ while True:
         elif choice == "3":
             print_pause("You take a deep breath before you open the "
                         "black door.")
-            print_pause("Somehow you know what's beyond this door.")
+            print_pause("You know what's beyond this door.")
             print_pause("You open the door.")
             print_pause(f"You find the {enemy} in the room.")
             while True:
