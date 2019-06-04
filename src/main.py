@@ -122,6 +122,11 @@ while True:
                         print_pause("You won!")
                         repeatCorridorChoice = False
                         break
+                    elif choice == "3":
+                        print_pause("You run back to the corridor.")
+                        print_pause(f"Looks like the {enemy} has not "
+                                    "followed you.")
+                        break
                 elif option_count == 2:
                     if choice == "1" and writing_utensil in items:
                         print_pause("You uncap your pen that you just found.")
@@ -133,7 +138,7 @@ while True:
                                     "battle with a single attack.")
                         repeatCorridorChoice = False
                         break
-                    if choice == "1" and "deathnote" in items:
+                    elif choice == "1" and "deathnote" in items:
                         print_pause("You gather all your courage and ask "
                                     f"the {enemy} for his autograph.")
                         print_pause(f"But the {enemy} is annoyed that you "
@@ -141,6 +146,17 @@ while True:
                         print_pause(f"The {enemy} renders you unfit for "
                                     "battle with a single attack.")
                         repeatCorridorChoice = False
+                        break
+                    elif choice == "2":
+                        print_pause("You run back to the corridor.")
+                        print_pause(f"Looks like the {enemy} has not "
+                                    "followed you.")
+                        break
+                elif option_count == 1:
+                    if choice == "1":
+                        print_pause("You run back to the corridor.")
+                        print_pause(f"Looks like the {enemy} has not "
+                                    "followed you.")
                         break
         else:
             print_pause("Invalid input! Enter again.")
