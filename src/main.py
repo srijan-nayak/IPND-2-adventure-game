@@ -125,6 +125,8 @@ while True:
                         print_pause(f"Looks like the {enemy} has not "
                                     "followed you.")
                         break
+                    else:
+                        print_pause("Invalid input! Enter again.")
                 elif option_count == 2:
                     if choice == "1" and writing_utensil in items:
                         print_pause("You uncap your pen that you just found.")
@@ -150,12 +152,16 @@ while True:
                         print_pause(f"Looks like the {enemy} has not "
                                     "followed you.")
                         break
+                    else:
+                        print_pause("Invalid input! Enter again.")
                 elif option_count == 1:
                     if choice == "1":
                         print_pause("You run back to the corridor.")
                         print_pause(f"Looks like the {enemy} has not "
                                     "followed you.")
                         break
+                    else:
+                        print_pause("Invalid input! Enter again.")
         else:
             print_pause("Invalid input! Enter again.")
     print_pause("Would you like to try again?")
