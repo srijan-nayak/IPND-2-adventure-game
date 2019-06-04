@@ -14,9 +14,9 @@ def print_pause(string: str, delay=2)->None:
 enemies = ["Red Dragon", "Armoured Ogre", "Ferocious Minotaur"]
 writing_utensils = ["pen", "pencil", "marker"]
 choice = ""
-items = []
 
 while True:
+    items = []
     enemy = random.choice(enemies)
     writing_utensil = random.choice(writing_utensils)
     print_pause("You are in an empty corridor deep in a dungeon.")
