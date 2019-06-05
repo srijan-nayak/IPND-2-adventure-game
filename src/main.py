@@ -28,7 +28,7 @@ def enter_green_door()->None:
     print_pause("You leave the room.")
 
 
-def enter_blue_door(items: list)->None:
+def enter_blue_door()->None:
     print_pause("You enter the room with the blue door.")
     if writing_utensil not in items:
         print_pause(f"You find a {writing_utensil} lying on "
@@ -170,7 +170,7 @@ while True:
         if choice == "1":
             enter_green_door()
         elif choice == "2":
-            enter_blue_door(items)
+            enter_blue_door()
         elif choice == "3":
             repeatCorridorChoice = enter_black_door(items)
         else:
