@@ -28,6 +28,18 @@ def enter_green_door(items: list)->None:
     print_pause("You leave the room.")
 
 
+def enter_blue_door(items: list)->None:
+    print_pause("You enter the room with the blue door.")
+    if writing_utensil not in items:
+        print_pause(f"You find a {writing_utensil} lying on "
+                    "the ground.")
+        items.append(writing_utensil)
+        print_pause(f"You take the {writing_utensil}.")
+    else:
+        print_pause("There is nothing here.")
+    print_pause("You leave the room.")
+
+
 enemies = ["Red Dragon", "Armoured Ogre", "Ferocious Minotaur"]
 writing_utensils = ["pen", "pencil", "marker"]
 choice = ""
@@ -69,15 +81,7 @@ while True:
         if choice == "1":
             enter_green_door(items)
         elif choice == "2":
-            print_pause("You enter the room with the blue door.")
-            if writing_utensil not in items:
-                print_pause(f"You find a {writing_utensil} lying on "
-                            "the ground.")
-                items.append(writing_utensil)
-                print_pause(f"You take the {writing_utensil}.")
-            else:
-                print_pause("There is nothing here.")
-            print_pause("You leave the room.")
+            enter_blue_door(items)
         elif choice == "3":
             print_pause("You take a deep breath before you open the "
                         "black door.")
