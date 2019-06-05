@@ -11,7 +11,7 @@ def print_pause(string: str, delay=2)->None:
     time.sleep(delay)
 
 
-def enter_green_door(items: list)->None:
+def enter_green_door()->None:
     print_pause("You enter the room with the green door.")
     if "deathnote" not in items:
         print_pause("You find a black notebook lying on the ground.")
@@ -67,7 +67,7 @@ while True:
         print_pause("Enter one of the option numbers.", 0)
         choice = input()
         if choice == "1":
-            enter_green_door(items)
+            enter_green_door()
         elif choice == "2":
             print_pause("You enter the room with the blue door.")
             if writing_utensil not in items:
