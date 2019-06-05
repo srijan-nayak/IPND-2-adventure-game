@@ -40,7 +40,7 @@ def enter_blue_door()->None:
     print_pause("You leave the room.")
 
 
-def enter_black_door(items: list)->bool:
+def enter_black_door()->bool:
     print_pause("You take a deep breath before you open the "
                 "black door.")
     print_pause("You know what's beyond this door.")
@@ -172,7 +172,7 @@ while True:
         elif choice == "2":
             enter_blue_door()
         elif choice == "3":
-            repeatCorridorChoice = enter_black_door(items)
+            repeatCorridorChoice = enter_black_door()
         else:
             print_pause("Invalid input! Enter again.")
     print_pause("Would you like to try again?")
