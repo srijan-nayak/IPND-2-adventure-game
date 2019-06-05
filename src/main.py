@@ -11,6 +11,23 @@ def print_pause(string: str, delay=2)->None:
     time.sleep(delay)
 
 
+def enter_green_door(items: list)->None:
+    print_pause("You enter the room with the green door.")
+    if "deathnote" not in items:
+        print_pause("You find a black notebook lying on the ground.")
+        print_pause("The notebook has DEATHNOTE written on it.")
+        print_pause("It has some instructions written in it.")
+        print_pause("Looks like if you write someone's name, whose")
+        print_pause("face you have seen, in the DEATHNOTE, that")
+        print_pause("person will die in 10 seconds due to a heart")
+        print_pause("attack.")
+        items.append("deathnote")
+        print_pause("You take the DEATHNOTE.")
+    else:
+        print_pause("There's nothing here.")
+    print_pause("You leave the room.")
+
+
 enemies = ["Red Dragon", "Armoured Ogre", "Ferocious Minotaur"]
 writing_utensils = ["pen", "pencil", "marker"]
 choice = ""
@@ -50,20 +67,7 @@ while True:
         print_pause("Enter one of the option numbers.", 0)
         choice = input()
         if choice == "1":
-            print_pause("You enter the room with the green door.")
-            if "deathnote" not in items:
-                print_pause("You find a black notebook lying on the ground.")
-                print_pause("The notebook has DEATHNOTE written on it.")
-                print_pause("It has some instructions written in it.")
-                print_pause("Looks like if you write someone's name, whose")
-                print_pause("face you have seen, in the DEATHNOTE, that")
-                print_pause("person will die in 10 seconds due to a heart")
-                print_pause("attack.")
-                items.append("deathnote")
-                print_pause("You take the DEATHNOTE.")
-            else:
-                print_pause("There's nothing here.")
-            print_pause("You leave the room.")
+            enter_green_door(items)
         elif choice == "2":
             print_pause("You enter the room with the blue door.")
             if writing_utensil not in items:
