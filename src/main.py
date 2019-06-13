@@ -2,7 +2,7 @@ import random
 import time
 
 
-def print_pause(string: str, delay=2)->None:
+def print_pause(string: str, delay=2) -> None:
     """Print a passed in string after a
     delay of passed in seconds. Default
     delay is of 2 seconds.
@@ -11,7 +11,7 @@ def print_pause(string: str, delay=2)->None:
     time.sleep(delay)
 
 
-def enter_green_door()->None:
+def enter_green_door() -> None:
     print_pause("You enter the room with the green door.")
     if "deathnote" not in items:
         print_pause("You find a black notebook lying on the ground.")
@@ -28,7 +28,7 @@ def enter_green_door()->None:
     print_pause("You leave the room.")
 
 
-def enter_blue_door()->None:
+def enter_blue_door() -> None:
     print_pause("You enter the room with the blue door.")
     if writing_utensil not in items:
         print_pause(f"You find a {writing_utensil} lying on "
@@ -40,7 +40,7 @@ def enter_blue_door()->None:
     print_pause("You leave the room.")
 
 
-def enter_black_door()->bool:
+def enter_black_door() -> bool:
     print_pause("You take a deep breath before you open the "
                 "black door.")
     print_pause("You know what's beyond this door.")
