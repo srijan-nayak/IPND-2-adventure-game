@@ -18,22 +18,7 @@ while True:
     print_pause(f"You have come here to kill the {enemy}.")
     print_pause("The problem is that you broke you trusty sword "
                 "while making your way till here.")
-    while True:
-        print_pause("What do you do?")
-        print_pause("1. Give up and go back home", 1)
-        print_pause("2. Continue this hopeless quest")
-        print_pause("Enter one of the option numbers.", 0)
-        choice = input()
-        if choice == "1":
-            print_pause("You exit the dungeon and go back home.")
-            print_pause("GAME OVER!")
-            exit()
-        elif choice == "2":
-            print_pause("You continue on this seemingly hopeless "
-                        "quest.")
-            break
-        else:
-            print_pause("Invalid input! Enter again.")
+    print_pause("But still you contniue on this hopeless quest.")
     print_pause("Would you like to try again?")
     choice = input().lower()
     if choice != "y":
