@@ -131,7 +131,6 @@ def enter_black_door() -> bool:
 
 enemies = ["Red Dragon", "Armoured Ogre", "Ferocious Minotaur"]
 writing_utensils = ["pen", "pencil", "marker"]
-choice = ""
 
 while True:
     items = []
