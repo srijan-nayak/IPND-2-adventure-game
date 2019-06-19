@@ -11,7 +11,7 @@ def print_pause(string: str, delay=2) -> None:
     time.sleep(delay)
 
 
-def enter_green_door() -> None:
+def enter_green_door(items: list) -> None:
     print_pause("You enter the room with the green door.")
     if "deathnote" not in items:
         print_pause("You find a black notebook lying on the ground.")
@@ -28,7 +28,7 @@ def enter_green_door() -> None:
     print_pause("You leave the room.")
 
 
-def enter_blue_door() -> None:
+def enter_blue_door(items: list, writing_utensil: str) -> None:
     print_pause("You enter the room with the blue door.")
     if writing_utensil not in items:
         print_pause(f"You find a {writing_utensil} lying on "
@@ -40,7 +40,7 @@ def enter_blue_door() -> None:
     print_pause("You leave the room.")
 
 
-def enter_black_door() -> bool:
+def enter_black_door(items: list, writing_utensil: str, enemy: str) -> bool:
     print_pause("You take a deep breath before you open the "
                 "black door.")
     print_pause("You know what's beyond this door.")
@@ -129,10 +129,9 @@ def enter_black_door() -> bool:
     return True
 
 
-enemies = ["Red Dragon", "Armoured Ogre", "Ferocious Minotaur"]
-writing_utensils = ["pen", "pencil", "marker"]
-
-while True:
+def start_adventure() -> None:
+    enemies = ["Red Dragon", "Armoured Ogre", "Ferocious Minotaur"]
+    writing_utensils = ["pen", "pencil", "marker"]
     items = []
     enemy = random.choice(enemies)
     writing_utensil = random.choice(writing_utensils)
@@ -152,14 +151,20 @@ while True:
         print_pause("Enter one of the option numbers.", 0)
         choice = input()
         if choice == "1":
-            enter_green_door()
+            enter_green_door(items)
         elif choice == "2":
-            enter_blue_door()
+            enter_blue_door(items, writing_utensil)
         elif choice == "3":
-            repeatCorridorChoice = enter_black_door()
+            repeatCorridorChoice = enter_black_door(
+                items,
+                writing_utensil,
+                enemy)
         else:
             print_pause("Invalid input! Enter again.")
-    print_pause("Would you like to try again?")
+    print_pause("Would you like to try again ? [Y/n]")
     choice = input().lower()
-    if choice != "y":
-        break
+    if choice == "y":
+        start_adventure()
+
+
+start_adventure()
