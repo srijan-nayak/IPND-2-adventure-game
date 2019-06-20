@@ -15,6 +15,8 @@ def print_pause(string: str,
 def enter_green_door(items: list,
                      writing_utensil: str,
                      enemy: str) -> None:
+    """Handles the green door room experience.
+    """
     print_pause("You enter the room with the green door.")
     if "deathnote" not in items:
         print_pause("You find a black notebook lying on the ground.")
@@ -35,6 +37,8 @@ def enter_green_door(items: list,
 def enter_blue_door(items: list,
                     writing_utensil: str,
                     enemy: str) -> None:
+    """Handles the blue door room experience.
+    """
     print_pause("You enter the room with the blue door.")
     if writing_utensil not in items:
         print_pause(f"You find a {writing_utensil} lying on "
@@ -51,6 +55,9 @@ def handle_all_items_choice(choice: str,
                             items: list,
                             writing_utensil: str,
                             enemy: str) -> None:
+    """Choice handler for black door room when
+    player has collected all items.
+    """
     if choice == "1":
         print_pause(f"You take the {writing_utensil} that you just found.")
         print_pause(f"You rush towards the {enemy} swinging "
@@ -89,6 +96,9 @@ def handle_1_item_choice(choice: str,
                          items: list,
                          writing_utensil: str,
                          enemy: str) -> None:
+    """Choice handler for black door room when
+    player has found only one of the items.
+    """
     if choice == "1" and writing_utensil in items:
         print_pause(f"You take the {writing_utensil} that you just found.")
         print_pause(f"You rush towards the {enemy} swinging "
@@ -118,6 +128,9 @@ def handle_no_item_choice(choice: str,
                           items: list,
                           writing_utensil: str,
                           enemy: str) -> None:
+    """Choice handler for black door room when
+    player has found none of the items.
+    """
     if choice == "1":
         print_pause("You run back to the corridor.")
         print_pause(f"Looks like the {enemy} has not "
@@ -131,6 +144,8 @@ def handle_no_item_choice(choice: str,
 def black_door_choice(items: list,
                       writing_utensil: str,
                       enemy: str) -> None:
+    """Choice presenter for the black door room.
+    """
     print_pause("What do you do?")
     option_count = 0
     if writing_utensil in items:
@@ -154,6 +169,8 @@ def black_door_choice(items: list,
 def enter_black_door(items: list,
                      writing_utensil: str,
                      enemy: str) -> None:
+    """Intro for the black door room choice scenario.
+    """
     print_pause("You take a deep breath before you open the "
                 "black door.")
     print_pause("You know what's beyond this door.")
@@ -165,6 +182,8 @@ def enter_black_door(items: list,
 def corridor_choice(items: list,
                     writing_utensil: str,
                     enemy: str) -> None:
+    """Choice presenter and handler for the corridor.
+    """
     print_pause("Where would you like to go?")
     print_pause("1. Go to the room with the green door on the left", 1)
     print_pause("2. Go to the room with the blue door on the right", 1)
@@ -184,6 +203,8 @@ def corridor_choice(items: list,
 
 
 def start_adventure() -> None:
+    """Starts the game.
+    """
     enemies = ["Red Dragon", "Armoured Ogre", "Ferocious Minotaur"]
     writing_utensils = ["pen", "pencil", "marker"]
     items = []
