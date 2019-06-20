@@ -2,7 +2,8 @@ import random
 import time
 
 
-def print_pause(string: str, delay=2) -> None:
+def print_pause(string: str,
+                delay=2) -> None:
     """Give a pause of passed in seconds after
     printing a passed in string. Default delay
     is of 2 seconds.
@@ -11,7 +12,9 @@ def print_pause(string: str, delay=2) -> None:
     time.sleep(delay)
 
 
-def enter_green_door(items: list, writing_utensil: str, enemy: str) -> None:
+def enter_green_door(items: list,
+                     writing_utensil: str,
+                     enemy: str) -> None:
     print_pause("You enter the room with the green door.")
     if "deathnote" not in items:
         print_pause("You find a black notebook lying on the ground.")
@@ -29,7 +32,9 @@ def enter_green_door(items: list, writing_utensil: str, enemy: str) -> None:
     corridor_choice(items, writing_utensil, enemy)
 
 
-def enter_blue_door(items: list, writing_utensil: str, enemy: str) -> None:
+def enter_blue_door(items: list,
+                    writing_utensil: str,
+                    enemy: str) -> None:
     print_pause("You enter the room with the blue door.")
     if writing_utensil not in items:
         print_pause(f"You find a {writing_utensil} lying on "
@@ -123,7 +128,9 @@ def handle_no_item_choice(choice: str,
         black_door_choice(items, writing_utensil, enemy)
 
 
-def black_door_choice(items: list, writing_utensil: str, enemy: str) -> None:
+def black_door_choice(items: list,
+                      writing_utensil: str,
+                      enemy: str) -> None:
     print_pause("What do you do?")
     option_count = 0
     if writing_utensil in items:
@@ -144,7 +151,9 @@ def black_door_choice(items: list, writing_utensil: str, enemy: str) -> None:
         handle_no_item_choice(choice, items, writing_utensil, enemy)
 
 
-def enter_black_door(items: list, writing_utensil: str, enemy: str) -> None:
+def enter_black_door(items: list,
+                     writing_utensil: str,
+                     enemy: str) -> None:
     print_pause("You take a deep breath before you open the "
                 "black door.")
     print_pause("You know what's beyond this door.")
@@ -153,7 +162,9 @@ def enter_black_door(items: list, writing_utensil: str, enemy: str) -> None:
     black_door_choice(items, writing_utensil, enemy)
 
 
-def corridor_choice(items: list, writing_utensil: str, enemy: str) -> None:
+def corridor_choice(items: list,
+                    writing_utensil: str,
+                    enemy: str) -> None:
     print_pause("Where would you like to go?")
     print_pause("1. Go to the room with the green room on the left", 1)
     print_pause("2. Go to the room with the blue door on the right", 1)
