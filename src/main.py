@@ -42,6 +42,44 @@ def enter_blue_door(items: list, writing_utensil: str, enemy: str) -> None:
     corridor_choice(items, writing_utensil, enemy)
 
 
+def handle_all_items_choice(choice: str,
+                            items: list,
+                            writing_utensil: str,
+                            enemy: str) -> None:
+    if choice == "1":
+        print_pause("You uncap your pen that you just found.")
+        print_pause(f"You rush towards the {enemy} swinging "
+                    "your pen.")
+        print_pause("But you never stood a chance with your "
+                    "pen.")
+        print_pause(f"The {enemy} renders you unfit for "
+                    "battle with a single attack.")
+    elif choice == "2":
+        print_pause("You gather all your courage and ask "
+                    f"the {enemy} for his autograph.")
+        print_pause(f"Agreeing to your request, the {enemy} "
+                    "takes your DEATHNOTE and "
+                    f"your {writing_utensil} for signing.")
+        print_pause("While blushing. A lot.")
+        print_pause("He signs his name in the DEATHNOTE.")
+        print_pause("You take back the DEATHNOTE and the pen.")
+        print_pause(f"The {enemy} suddenly has a heart attack "
+                    "10 seconds after signing his name.")
+        print_pause(f"The {enemy} is dead!")
+        print_pause("Looks like the DEATHNOTE worked.")
+        print_pause("Congrats!")
+        print_pause(f"You have killed the {enemy}!")
+        print_pause("You won!")
+    elif choice == "3":
+        print_pause("You run back to the corridor.")
+        print_pause(f"Looks like the {enemy} has not "
+                    "followed you.")
+        corridor_choice(items, writing_utensil, enemy)
+    else:
+        print_pause("Invalid input! Enter again.")
+        black_door_choice(items, writing_utensil, enemy)
+
+
 def black_door_choice(items: list, writing_utensil: str, enemy: str) -> None:
     print_pause("What do you do?")
     option_count = 0
@@ -56,40 +94,7 @@ def black_door_choice(items: list, writing_utensil: str, enemy: str) -> None:
     print_pause("Enter one of the option numbers.", 0)
     choice = input()
     if option_count == 3:
-        if choice == "1":
-            print_pause("You uncap your pen that you just found.")
-            print_pause(f"You rush towards the {enemy} swinging "
-                        "your pen.")
-            print_pause("But you never stood a chance with your "
-                        "pen.")
-            print_pause(f"The {enemy} renders you unfit for "
-                        "battle with a single attack.")
-            return
-        elif choice == "2":
-            print_pause("You gather all your courage and ask "
-                        f"the {enemy} for his autograph.")
-            print_pause(f"Agreeing to your request, the {enemy} "
-                        "takes your DEATHNOTE and "
-                        f"your {writing_utensil} for signing.")
-            print_pause("While blushing. A lot.")
-            print_pause("He signs his name in the DEATHNOTE.")
-            print_pause("You take back the DEATHNOTE and the pen.")
-            print_pause(f"The {enemy} suddenly has a heart attack "
-                        "10 seconds after signing his name.")
-            print_pause(f"The {enemy} is dead!")
-            print_pause("Looks like the DEATHNOTE worked.")
-            print_pause("Congrats!")
-            print_pause(f"You have killed the {enemy}!")
-            print_pause("You won!")
-            return
-        elif choice == "3":
-            print_pause("You run back to the corridor.")
-            print_pause(f"Looks like the {enemy} has not "
-                        "followed you.")
-            corridor_choice(items, writing_utensil, enemy)
-        else:
-            print_pause("Invalid input! Enter again.")
-            black_door_choice(items, writing_utensil, enemy)
+        handle_all_items_choice(choice, items, writing_utensil, enemy)
     elif option_count == 2:
         if choice == "1" and writing_utensil in items:
             print_pause("You uncap your pen that you just found.")
