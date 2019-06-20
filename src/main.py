@@ -11,7 +11,7 @@ def print_pause(string: str, delay=2) -> None:
     time.sleep(delay)
 
 
-def enter_green_door(items: list) -> None:
+def enter_green_door(items: list, writing_utensil: str, enemy: str) -> None:
     print_pause("You enter the room with the green door.")
     if "deathnote" not in items:
         print_pause("You find a black notebook lying on the ground.")
@@ -129,6 +129,25 @@ def enter_black_door(items: list, writing_utensil: str, enemy: str) -> bool:
     return True
 
 
+def corridor_choice(items: list, writing_utensil: str, enemy: str) -> None:
+    print_pause("Where would you like to go?")
+    print_pause("1. Go to the room with the green room on the left", 1)
+    print_pause("2. Go to the room with the blue door on the right", 1)
+    print_pause("3. Go to the room with the black door at the end of the "
+                "corridor")
+    print_pause("Enter one of the option numbers.", 0)
+    choice = input()
+    if choice == "1":
+        enter_green_door(items, writing_utensil, enemy)
+    elif choice == "2":
+        enter_blue_door(items, writing_utensil, enemy)
+    elif choice == "3":
+        enter_black_door(items, writing_utensil, enemy)
+    else:
+        print_pause("Invalid input! Enter again.")
+        corridor_choice(items, writing_utensil, enemy)
+
+
 def start_adventure() -> None:
     enemies = ["Red Dragon", "Armoured Ogre", "Ferocious Minotaur"]
     writing_utensils = ["pen", "pencil", "marker"]
@@ -141,26 +160,7 @@ def start_adventure() -> None:
                 "while making your way till here.")
     print_pause("But still you contniue on this hopeless quest.")
     print_pause("You spot three doors in the corridor.")
-    repeatCorridorChoice = True
-    while repeatCorridorChoice:
-        print_pause("Where would you like to go?")
-        print_pause("1. Go to the room with the green room on the left", 1)
-        print_pause("2. Go to the room with the blue door on the right", 1)
-        print_pause("3. Go to the room with the black door at the end of the "
-                    "corridor")
-        print_pause("Enter one of the option numbers.", 0)
-        choice = input()
-        if choice == "1":
-            enter_green_door(items)
-        elif choice == "2":
-            enter_blue_door(items, writing_utensil)
-        elif choice == "3":
-            repeatCorridorChoice = enter_black_door(
-                items,
-                writing_utensil,
-                enemy)
-        else:
-            print_pause("Invalid input! Enter again.")
+    corridor_choice(items, writing_utensil, enemy)
     print_pause("Would you like to try again ? [Y/n]")
     choice = input().lower()
     if choice == "y":
