@@ -26,6 +26,7 @@ def enter_green_door(items: list, writing_utensil: str, enemy: str) -> None:
     else:
         print_pause("There's nothing here.")
     print_pause("You leave the room.")
+    corridor_choice(items, writing_utensil, enemy)
 
 
 def enter_blue_door(items: list, writing_utensil: str) -> None:
