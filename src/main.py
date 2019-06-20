@@ -42,7 +42,7 @@ def enter_blue_door(items: list, writing_utensil: str, enemy: str) -> None:
     corridor_choice(items, writing_utensil, enemy)
 
 
-def enter_black_door(items: list, writing_utensil: str, enemy: str) -> bool:
+def enter_black_door(items: list, writing_utensil: str, enemy: str) -> None:
     print_pause("You take a deep breath before you open the "
                 "black door.")
     print_pause("You know what's beyond this door.")
@@ -70,7 +70,7 @@ def enter_black_door(items: list, writing_utensil: str, enemy: str) -> bool:
                             "pen.")
                 print_pause(f"The {enemy} renders you unfit for "
                             "battle with a single attack.")
-                return False
+                return
             elif choice == "2":
                 print_pause("You gather all your courage and ask "
                             f"the {enemy} for his autograph.")
@@ -87,12 +87,12 @@ def enter_black_door(items: list, writing_utensil: str, enemy: str) -> bool:
                 print_pause("Congrats!")
                 print_pause(f"You have killed the {enemy}!")
                 print_pause("You won!")
-                return False
+                return
             elif choice == "3":
                 print_pause("You run back to the corridor.")
                 print_pause(f"Looks like the {enemy} has not "
                             "followed you.")
-                break
+                corridor_choice(items, writing_utensil, enemy)
             else:
                 print_pause("Invalid input! Enter again.")
         elif option_count == 2:
@@ -104,7 +104,7 @@ def enter_black_door(items: list, writing_utensil: str, enemy: str) -> bool:
                             "pen.")
                 print_pause(f"The {enemy} renders you unfit for "
                             "battle with a single attack.")
-                return False
+                return
             elif choice == "1" and "deathnote" in items:
                 print_pause("You gather all your courage and ask "
                             f"the {enemy} for his autograph.")
@@ -112,12 +112,12 @@ def enter_black_door(items: list, writing_utensil: str, enemy: str) -> bool:
                             "don't have a writing utensil!")
                 print_pause(f"The {enemy} renders you unfit for "
                             "battle with a single attack.")
-                return False
+                return
             elif choice == "2":
                 print_pause("You run back to the corridor.")
                 print_pause(f"Looks like the {enemy} has not "
                             "followed you.")
-                break
+                corridor_choice(items, writing_utensil, enemy)
             else:
                 print_pause("Invalid input! Enter again.")
         elif option_count == 1:
@@ -125,10 +125,9 @@ def enter_black_door(items: list, writing_utensil: str, enemy: str) -> bool:
                 print_pause("You run back to the corridor.")
                 print_pause(f"Looks like the {enemy} has not "
                             "followed you.")
-                break
+                corridor_choice(items, writing_utensil, enemy)
             else:
                 print_pause("Invalid input! Enter again.")
-    return True
 
 
 def corridor_choice(items: list, writing_utensil: str, enemy: str) -> None:
