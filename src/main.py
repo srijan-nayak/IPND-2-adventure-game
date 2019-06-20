@@ -80,6 +80,35 @@ def handle_all_items_choice(choice: str,
         black_door_choice(items, writing_utensil, enemy)
 
 
+def handle_1_item_choice(choice: str,
+                         items: list,
+                         writing_utensil: str,
+                         enemy: str) -> None:
+    if choice == "1" and writing_utensil in items:
+        print_pause("You uncap your pen that you just found.")
+        print_pause(f"You rush towards the {enemy} swinging "
+                    "your pen.")
+        print_pause("But you never stood a chance with your "
+                    "pen.")
+        print_pause(f"The {enemy} renders you unfit for "
+                    "battle with a single attack.")
+    elif choice == "1" and "deathnote" in items:
+        print_pause("You gather all your courage and ask "
+                    f"the {enemy} for his autograph.")
+        print_pause(f"But the {enemy} is annoyed that you "
+                    "don't have a writing utensil!")
+        print_pause(f"The {enemy} renders you unfit for "
+                    "battle with a single attack.")
+    elif choice == "2":
+        print_pause("You run back to the corridor.")
+        print_pause(f"Looks like the {enemy} has not "
+                    "followed you.")
+        corridor_choice(items, writing_utensil, enemy)
+    else:
+        print_pause("Invalid input! Enter again.")
+        black_door_choice(items, writing_utensil, enemy)
+
+
 def black_door_choice(items: list, writing_utensil: str, enemy: str) -> None:
     print_pause("What do you do?")
     option_count = 0
@@ -96,31 +125,7 @@ def black_door_choice(items: list, writing_utensil: str, enemy: str) -> None:
     if option_count == 3:
         handle_all_items_choice(choice, items, writing_utensil, enemy)
     elif option_count == 2:
-        if choice == "1" and writing_utensil in items:
-            print_pause("You uncap your pen that you just found.")
-            print_pause(f"You rush towards the {enemy} swinging "
-                        "your pen.")
-            print_pause("But you never stood a chance with your "
-                        "pen.")
-            print_pause(f"The {enemy} renders you unfit for "
-                        "battle with a single attack.")
-            return
-        elif choice == "1" and "deathnote" in items:
-            print_pause("You gather all your courage and ask "
-                        f"the {enemy} for his autograph.")
-            print_pause(f"But the {enemy} is annoyed that you "
-                        "don't have a writing utensil!")
-            print_pause(f"The {enemy} renders you unfit for "
-                        "battle with a single attack.")
-            return
-        elif choice == "2":
-            print_pause("You run back to the corridor.")
-            print_pause(f"Looks like the {enemy} has not "
-                        "followed you.")
-            corridor_choice(items, writing_utensil, enemy)
-        else:
-            print_pause("Invalid input! Enter again.")
-            black_door_choice(items, writing_utensil, enemy)
+        handle_1_item_choice(choice, items, writing_utensil, enemy)
     elif option_count == 1:
         if choice == "1":
             print_pause("You run back to the corridor.")
