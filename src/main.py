@@ -11,7 +11,7 @@ def print_pause(string: str, delay=2) -> None:
     time.sleep(delay)
 
 
-def enter_green_door(items: list) -> None:
+def enter_green_door(items: list, writing_utensil: str, enemy: str) -> None:
     print_pause("You enter the room with the green door.")
     if "deathnote" not in items:
         print_pause("You find a black notebook lying on the ground.")
@@ -26,6 +26,7 @@ def enter_green_door(items: list) -> None:
     else:
         print_pause("There's nothing here.")
     print_pause("You leave the room.")
+    corridor_choice(items, writing_utensil, enemy)
 
 
 def enter_blue_door(items: list, writing_utensil: str) -> None:
