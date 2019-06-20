@@ -52,11 +52,11 @@ def handle_all_items_choice(choice: str,
                             writing_utensil: str,
                             enemy: str) -> None:
     if choice == "1":
-        print_pause("You uncap your pen that you just found.")
+        print_pause(f"You take the {writing_utensil} that you just found.")
         print_pause(f"You rush towards the {enemy} swinging "
-                    "your pen.")
+                    f"your {writing_utensil}.")
         print_pause("But you never stood a chance with your "
-                    "pen.")
+                    f"{writing_utensil}.")
         print_pause(f"The {enemy} renders you unfit for "
                     "battle with a single attack.")
     elif choice == "2":
@@ -67,7 +67,7 @@ def handle_all_items_choice(choice: str,
                     f"your {writing_utensil} for signing.")
         print_pause("While blushing. A lot.")
         print_pause("He signs his name in the DEATHNOTE.")
-        print_pause("You take back the DEATHNOTE and the pen.")
+        print_pause(f"You take back the DEATHNOTE and the {writing_utensil}.")
         print_pause(f"The {enemy} suddenly has a heart attack "
                     "10 seconds after signing his name.")
         print_pause(f"The {enemy} is dead!")
@@ -90,11 +90,11 @@ def handle_1_item_choice(choice: str,
                          writing_utensil: str,
                          enemy: str) -> None:
     if choice == "1" and writing_utensil in items:
-        print_pause("You uncap your pen that you just found.")
+        print_pause(f"You take the {writing_utensil} that you just found.")
         print_pause(f"You rush towards the {enemy} swinging "
-                    "your pen.")
+                    f"your {writing_utensil}.")
         print_pause("But you never stood a chance with your "
-                    "pen.")
+                    f"{writing_utensil}.")
         print_pause(f"The {enemy} renders you unfit for "
                     "battle with a single attack.")
     elif choice == "1" and "deathnote" in items:
@@ -135,7 +135,7 @@ def black_door_choice(items: list,
     option_count = 0
     if writing_utensil in items:
         option_count += 1
-        print_pause(f"{option_count}. Fight him with your pen", 1)
+        print_pause(f"{option_count}. Fight him with the {writing_utensil}", 1)
     if "deathnote" in items:
         option_count += 1
         print_pause(f"{option_count}. Ask for his autograph", 1)
