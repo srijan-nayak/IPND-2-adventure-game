@@ -28,7 +28,7 @@ def enter_green_door(items: list) -> None:
     print_pause("You leave the room.")
 
 
-def enter_blue_door(items: list, writing_utensil: str) -> None:
+def enter_blue_door(items: list, writing_utensil: str, enemy: str) -> None:
     print_pause("You enter the room with the blue door.")
     if writing_utensil not in items:
         print_pause(f"You find a {writing_utensil} lying on "
@@ -38,6 +38,7 @@ def enter_blue_door(items: list, writing_utensil: str) -> None:
     else:
         print_pause("There is nothing here.")
     print_pause("You leave the room.")
+    corridor_choice(items, writing_utensil, enemy)
 
 
 def enter_black_door(items: list, writing_utensil: str, enemy: str) -> bool:
