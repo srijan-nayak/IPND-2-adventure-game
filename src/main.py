@@ -188,7 +188,7 @@ def corridor_choice(items: list,
     print_pause("1. Go to the room with the green door on the left", 1)
     print_pause("2. Go to the room with the blue door on the right", 1)
     print_pause("3. Go to the room with the black door at the end of the "
-                "corridor")
+                "corridor", 1)
     print_pause("Enter one of the option numbers.", 0)
     choice = input()
     if choice == "1":
