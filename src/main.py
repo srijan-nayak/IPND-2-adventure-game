@@ -205,11 +205,15 @@ def corridor_choice(items: list,
 def start_adventure() -> None:
     """Starts the game.
     """
-    enemies = ["Red Dragon", "Armoured Ogre", "Ferocious Minotaur"]
-    writing_utensils = ["pen", "pencil", "marker"]
-    items = []
-    enemy = random.choice(enemies)
-    writing_utensil = random.choice(writing_utensils)
+    # Enemy and writing_utensil is selected on random each time the game
+    # starts or restarts.
+    enemy = random.choice(["Red Dragon",
+                           "Armoured Ogre",
+                           "Ferocious Minotaur"])
+    writing_utensil = random.choice(["pen",
+                                     "pencil",
+                                     "marker"])
+    items = []  # Inventory for the player.
     print_pause("You are in an empty corridor deep in a dungeon.")
     print_pause(f"You have come here to kill the {enemy}.")
     print_pause("The problem is that you broke you trusty sword "
