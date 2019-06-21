@@ -213,7 +213,7 @@ def start_adventure() -> None:
     writing_utensil = random.choice(["pen",
                                      "pencil",
                                      "marker"])
-    items = []  # Inventory for the player.
+    items = []  # Empty inventory for the player.
     print_pause("You are in an empty corridor deep in a dungeon.")
     print_pause(f"You have come here to kill the {enemy}.")
     print_pause("The problem is that you broke you trusty sword "
@@ -223,7 +223,7 @@ def start_adventure() -> None:
     corridor_choice(items, writing_utensil, enemy)
     print_pause("Would you like to try again ? [Y/n]")
     choice = input().lower()
-    if choice == "y":
+    if choice == "y":  # Game terminates if input is anything other than Y/y.
         start_adventure()
 
 
